@@ -1,0 +1,74 @@
+.header {
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  margin-bottom: 120px;
+  @include flex(
+    (
+      jc: space-between,
+    )
+  );
+  .left {
+    @include flex(
+      (
+        ai: center,
+        gap: 5px,
+      )
+    );
+
+    .logo {
+      @include flex(
+        (
+          ai: center,
+          jc: center,
+        )
+      );
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid var(--color1);
+      background-color: var(--color1);
+      & svg {
+        color: var(--color-white);
+        background-color: transparent;
+        width: 60%;
+        height: 60%;
+      }
+    }
+    .text {
+      & span {
+        font-weight: 700;
+        font-size: 21px;
+      }
+    }
+  }
+  .right {
+    @include flex(
+      (
+        ai: center,
+        gap: 30px,
+      )
+    );
+    .buttons {
+      @include flex(
+        (
+          ai: center,
+          gap: 40px,
+        )
+      );
+    }
+    .user {
+      @include flex(
+        (
+          ai: center,
+          gap: 10px,
+        )
+      );
+      &-login {
+        border: 1px solid var(--color1);
+        background-color: var(--color-white);
+        color: black;
+      }
+    }
+  }
+}

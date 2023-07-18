@@ -1,0 +1,29 @@
+.heading {
+  @include flex(
+    (
+      fd: column,
+      ai: center,
+    )
+  );
+  gap: 10px;
+  &-content {
+    width: 50%;
+    @include flex(
+      (
+        fd: column,
+        ai: center,
+        gap: 10px,
+      )
+    );
+    &-top span {
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    &-titel p {
+      text-align: center;
+      opacity: 0.5;
+      line-height: 1.5;
+    }
+  }
+}

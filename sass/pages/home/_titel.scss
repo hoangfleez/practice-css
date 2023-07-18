@@ -1,0 +1,40 @@
+.titel {
+  width: 100%;
+  height: auto;
+  margin-bottom: 120px;
+  @include flex(
+    (
+      gap: 150px,
+    )
+  );
+  &-left {
+    width: 60%;
+    & span {
+      font-weight: 700;
+      font-size: 80px;
+    }
+  }
+  &-right {
+    @include flex(
+      (
+        fd: column,
+        gap: 20px,
+      )
+    );
+    width: 40%;
+    &-top {
+      color: var(--color1);
+      & span {
+        background-color: var(--color-white);
+        padding: 5px;
+      }
+    }
+    &-mid {
+      opacity: 0.5;
+      margin-bottom: 20px;
+      & p {
+        line-height: 1.5;
+      }
+    }
+  }
+}

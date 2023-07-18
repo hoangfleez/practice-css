@@ -1,0 +1,126 @@
+.learning {
+  @include flex(
+    (
+      ai: flex-start,
+      gap: 45px,
+    )
+  );
+  margin-bottom: 120px;
+  &-left {
+    width: 50%;
+    @include flex(
+      (
+        fd: column,
+      )
+    );
+    gap: 20px;
+    &-titel span {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+    &-center {
+      @include flex(
+        (
+          fd: column,
+          gap: 20px,
+        )
+      );
+      & p {
+        font-size: 18px;
+        opacity: 0.5;
+        line-height: 1.5;
+      }
+    }
+    &-bottom {
+      @include flex(
+        (
+          jc: space-between,
+        )
+      );
+      &-item {
+        @include flex(
+          (
+            fd: column,
+            ai: center,
+            gap: 10px,
+          )
+        );
+        .number span {
+          font-weight: 700;
+          font-size: 50px;
+          color: var(--color1);
+        }
+        .content span {
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &-right {
+    width: 50%;
+    @include flex(
+      (
+        fd: column,
+        gap: 25px,
+      )
+    );
+    &-item {
+      @include flex(
+        (
+          fd: column,
+          gap: 10px,
+        )
+      );
+    }
+    .top {
+      @include flex(
+        (
+          ai: center,
+          gap: 20px,
+        )
+      );
+      &-icon {
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #ffd235;
+        background-color: #ffd235;
+        &-item {
+          width: 40px;
+          height: 40px;
+          color: var(--color-white);
+        }
+      }
+      &-icon2 {
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid purple;
+        background-color: purple;
+      }
+      &-icon3 {
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid rgb(76, 76, 160);
+        background-color: rgb(76, 76, 160);
+      }
+      &-titel {
+        @include flex(
+          (
+            fd: column,
+            gap: 5px,
+          )
+        );
+        & span {
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+    }
+    .content p {
+      opacity: 0.5;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.popular {
+  position: absolute;
+  bottom: -100px;
+  background-color: var(--bg-color);
+  padding: 25px;
+  border-radius: 10px;
+  @include flex(
+    (
+      jc: space-between,
+    )
+  );
+  width: 60%;
+
+  &-left {
+    @include flex(
+      (
+        jc: space-between,
+        fd: column,
+        gap: 10px,
+      )
+    );
+    &-items {
+      @include flex(
+        (
+          fd: column,
+          ai: center,
+          gap: 10px,
+        )
+      );
+      .item {
+        @include flex(
+          (
+            ai: center,
+            gap: 10px,
+          )
+        );
+      }
+      .icon {
+        color: var(--color-white);
+        background-color: var(--color1);
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: 1px solid;
+      }
+      & p {
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+  }
+  &-right {
+    & iframe {
+      border-radius: 15px;
+      height: 200px;
+      width: 300px;
+    }
+  }
+}

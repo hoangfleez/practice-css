@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: var(--primary-font);
+  font-size: var(--fz-default);
+  font-weight: var(--fw-default);
+  line-height: 1;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  padding: 0 300px;
+}
+ul,
+ol {
+  list-style-type: none;
+}

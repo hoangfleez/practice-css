@@ -1,0 +1,8 @@
+@mixin flex($options) {
+  display: flex;
+  align-items: map-get($options, ai);
+  justify-content: map-get($options, jc);
+  flex-direction: map-get($options, fd);
+  flex-wrap: map-get($options, fw);
+  gap: map-get($options, gap);
+}

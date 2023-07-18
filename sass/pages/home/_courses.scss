@@ -1,0 +1,111 @@
+.courses {
+  @include flex(
+    (
+      fd: column,
+      jc: center,
+      gap: 70px,
+    )
+  );
+  margin-bottom: 120px;
+}
+.lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 20px;
+  &-item {
+    @include flex(
+      (
+        fd: column,
+        gap: 15px,
+      )
+    );
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--color-white);
+    &-img {
+      max-width: 440px;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      & img {
+        object-fit: cover;
+      }
+    }
+    &-courses {
+      @include flex(
+        (
+          jc: space-between,
+          ai: center,
+        )
+      );
+      .name {
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: var(--color2) !important;
+      }
+      .price span {
+        color: var(--color1);
+        font-weight: 700;
+        font-size: 21px;
+      }
+    }
+    &-titel p {
+      font-weight: 700;
+      font-size: 22px;
+    }
+    &-other {
+      @include flex(
+        (
+          jc: space-between,
+          ai: center,
+        )
+      );
+      .lesson,
+      .students {
+        @include flex(
+          (
+            ai: center,
+            gap: 10px,
+          )
+        );
+        opacity: 0.5;
+        &-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    &-evaluate {
+      @include flex(
+        (
+          jc: space-between,
+          ai: center,
+        )
+      );
+      opacity: 0.8;
+      .abc {
+        @include flex(
+          (
+            ai: center,
+            gap: 10px,
+          )
+        );
+        &-icon {
+          @include flex(());
+          width: 60px;
+          height: 60px;
+          color: var(--color1);
+        }
+      }
+      .abc1 {
+        border-radius: 100%;
+        border: 1px solid var(--bg-color);
+        background-color: var(--bg-color);
+        &-icon {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}

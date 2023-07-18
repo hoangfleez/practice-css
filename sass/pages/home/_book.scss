@@ -1,0 +1,27 @@
+.book {
+  margin-bottom: 120px;
+  @include flex(
+    (
+      fd: column,
+      gap: 20px,
+    )
+  );
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+    &-item {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      &-img {
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+.book-titel {
+  line-height: 1.5;
+}
